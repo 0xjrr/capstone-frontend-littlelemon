@@ -1,39 +1,7 @@
 import React from "react";
 import { Box, Flex, Spacer, VStack, Image, HStack, Text, List, ListItem } from "@chakra-ui/react";
 import footerLogo from "../images/Asset 20@4x.png"
-
-const links = [
-    {
-        name: "Home",
-        url: "/#home",
-        anchor: "home",
-    },
-    {
-        name: "About",
-        url: "/#about",
-        anchor: "about",
-    },
-    {
-        name: "Menu",
-        url: "/#menu",
-        anchor: "menu",
-    },
-    {
-        name: "Reservations",
-        url: "/#reserve",
-        anchor: "reserve",
-    },
-    {
-        name: "Order online",
-        url: "/#order",
-        anchor: "order",
-    },
-    {
-        name: "Login",
-        url: "/#login",
-        anchor: "login",
-    },
-];
+import links from "../data/links";
 
 const Footer = () => {
     return (
