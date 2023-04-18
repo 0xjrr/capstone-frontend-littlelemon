@@ -58,8 +58,7 @@ const Header = () => {
                     py={4}
                     justifyContent="space-between"
                     alignItems="center"
-                    marginLeft={"60px"}
-                    marginRight={"60px"}
+                    margin={"0 80px"}
                 >
                     <nav>
                         <HStack spacing={8}>
