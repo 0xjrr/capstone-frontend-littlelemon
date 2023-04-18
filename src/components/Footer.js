@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Spacer, VStack, Image, HStack, Text, List, ListItem } from "@chakra-ui/react";
-import footerLogo from "../images/Asset 20@4x.png"
+import footerLogo from "../images//footerlogo.png"
 import links from "../data/links";
 
 const Footer = () => {

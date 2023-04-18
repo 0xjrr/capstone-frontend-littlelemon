@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, HStack, Image } from "@chakra-ui/react";
-import logo from "../images/Asset 16@4x.png"
+import logo from "../images/navlogo.png"
 import links from "../data/links";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
             transitionProperty="transform"
             transitionDuration=".3s"
             transitionTimingFunction="ease-in-out"
-            backgroundColor="whiteAlpha.50"
+            backgroundColor="white"
         >
             <Box
             margin="0 auto"
