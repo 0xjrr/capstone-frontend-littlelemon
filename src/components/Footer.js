@@ -9,18 +9,17 @@ const Footer = () => {
             <footer>
                 <Flex
                     margin={"0 188px"}
-                    color="white"
-                    justifyContent="center"
-                    alignItems="center"
+                    alignItems={"start"}
                     height={"256px"}
+                    color={"black"}
                 >
                     <Box p='4'>
                         <Image src={footerLogo} width={"124px"} height={"auto"} />
                     </Box>
                     <Spacer />
-                    <Box p='4' color={"black"}>
+                    <Box p='4'>
                         <VStack align={"left"}>
-                            <Text>
+                            <Text fontSize={"24px"}>
                                 Navigation
                             </Text>
                             <List>
@@ -34,12 +33,42 @@ const Footer = () => {
                         </VStack>
                     </Box>
                     <Spacer />
-                    <Box p='4' bg='red.400'>
-                        Box 1
+                    <Box p='4'>
+                        <VStack align={"left"}>
+                            <Text fontSize={"24px"}>
+                                Location
+                            </Text>
+                            <List>
+                                <ListItem>
+                                    Street Name
+                                </ListItem>
+                                <ListItem>
+                                    Phone
+                                </ListItem>
+                                <ListItem>
+                                    Mail
+                                </ListItem>
+                            </List>
+                        </VStack>
                     </Box>
                     <Spacer />
-                    <Box p='4' bg='green.400'>
-                        Box 2
+                    <Box p='4'>
+                        <VStack align={"left"}>
+                            <Text fontSize={"24px"}>
+                                Socials
+                            </Text>
+                            <List>
+                                <ListItem>
+                                    IG
+                                </ListItem>
+                                <ListItem>
+                                    FB
+                                </ListItem>
+                                <ListItem>
+                                    YT
+                                </ListItem>
+                            </List>
+                        </VStack>
                     </Box>
                 </Flex>
             </footer>
