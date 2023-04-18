@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { Box, HStack, Image } from "@chakra-ui/react";
 import logo from "../images/Asset 16@4x.png"
 
@@ -49,8 +48,7 @@ const Header = () => {
             transitionTimingFunction="ease-in-out"
             backgroundColor="whiteAlpha.50"
         >
-            <Box 
-            // color="gray.500" 
+            <Box
             margin="0 auto"
             >
                 <HStack
@@ -67,8 +65,8 @@ const Header = () => {
                     </nav>
                     <nav>
                         <HStack spacing={8}>
-                            {links.map(link => 
-                            <Box rounded={"md"} padding={"5px"} bgColor={"#495E57"}>
+                            {links.map(link =>
+                            <Box rounded={"md"} padding={"5px"}>
                                 <a key={link.anchor} href={link.url}> {link.name}</a>
                             </Box>)
                             }
