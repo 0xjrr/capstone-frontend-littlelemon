@@ -19,7 +19,7 @@ const Footer = () => {
                     <Spacer />
                     <Box p='4'>
                         <VStack align={"left"}>
-                            <Text fontSize={"24px"}>
+                            <Text fontSize={"18pt"}>
                                 Navigation
                             </Text>
                             <List>
@@ -35,7 +35,7 @@ const Footer = () => {
                     <Spacer />
                     <Box p='4'>
                         <VStack align={"left"}>
-                            <Text fontSize={"24px"}>
+                            <Text fontSize={"18pt"}>
                                 Location
                             </Text>
                             <List>
@@ -54,7 +54,7 @@ const Footer = () => {
                     <Spacer />
                     <Box p='4'>
                         <VStack align={"left"}>
-                            <Text fontSize={"24px"}>
+                            <Text fontSize={"18pt"}>
                                 Socials
                             </Text>
                             <List>
