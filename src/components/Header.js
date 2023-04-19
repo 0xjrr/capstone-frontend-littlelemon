@@ -15,20 +15,21 @@ const Header = () => {
             transitionDuration=".3s"
             transitionTimingFunction="ease-in-out"
             backgroundColor="white"
+            height={"124px"}
+            alignItems={"center"}
         >
             <Box
-            margin="0 auto"
+            margin={"0 188px"}
             >
                 <HStack
-                    px={16}
+                    px={0}
                     py={4}
                     justifyContent="space-between"
                     alignItems="center"
-                    margin={"0 80px"}
                 >
                     <nav>
                         <HStack spacing={8}>
-                            <Image src={logo} alt="Logo" height={"60px"} />
+                            <Image src={logo} alt="Logo" height={"60px"} width={"auto"} />
                         </HStack>
                     </nav>
                     <nav>
