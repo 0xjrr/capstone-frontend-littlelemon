@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Spacer, VStack, Image, HStack, Text, List, ListItem } from "@chakra-ui/react";
+import { Box, Flex, Spacer, VStack, Image, Text, List, ListItem } from "@chakra-ui/react";
 import footerLogo from "../images//footerlogo.png"
 import links from "../data/links";
 
