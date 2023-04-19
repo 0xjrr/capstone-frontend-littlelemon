@@ -1,32 +1,32 @@
 const links = [
     {
         name: "Home",
-        url: "/#home",
+        url: "/",
         anchor: "home",
     },
     {
         name: "About",
-        url: "/#about",
+        url: "/about",
         anchor: "about",
     },
     {
         name: "Menu",
-        url: "/#menu",
+        url: "/menu",
         anchor: "menu",
     },
     {
         name: "Reservations",
-        url: "/#reserve",
+        url: "/reserve",
         anchor: "reserve",
     },
     {
         name: "Order online",
-        url: "/#order",
+        url: "/order",
         anchor: "order",
     },
     {
         name: "Login",
-        url: "/#login",
+        url: "/login",
         anchor: "login",
     },
 ];
