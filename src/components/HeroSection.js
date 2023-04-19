@@ -1,7 +1,8 @@
-
-import { Text, Box, HStack, VStack, Image } from "@chakra-ui/react";
+import { Text, Box, HStack, VStack, Image, Spacer } from "@chakra-ui/react";
 import Location from "./Location";
 import ButtonYellow from "./ButtonYellow";
+import heroSectionImage from "../images/restaurant.jpg"
+
 const HeroSection = () => {
     return (
         <Box bgColor={"#495E57"} height={"512px"} >
@@ -9,10 +10,15 @@ const HeroSection = () => {
                 <VStack align={"right"}>
                     <Location />
                     <Text width={"300px"}>
-                    We are a family owned, Mediterranean restaurant, focused on traditional recipes with a modern twist.
+                        We are a family owned, Mediterranean restaurant, focused on traditional recipes with a modern twist.
                     </Text>
-                    <ButtonYellow buttonText={"Reserve"} urlEndpoint={"reserve"}/>
+                    <Spacer />
+                    <ButtonYellow buttonText={"Reserve"} urlEndpoint={"reserve"} />
                 </VStack>
+                <Spacer></Spacer>
+                <Box >
+                    <Image src={heroSectionImage} maxWidth={"491px"}></Image>
+                </Box>
             </HStack>
 
         </Box>
