@@ -1,7 +1,7 @@
 import { Text, Box, HStack, VStack, Image, Spacer } from "@chakra-ui/react";
 import Location from "./Location";
 import ButtonYellow from "./ButtonYellow";
-import heroSectionImage from "../images/restaurant.jpg"
+import heroSectionImage from "../images/herosection.jpg"
 
 const HeroSection = () => {
     return (
@@ -15,10 +15,11 @@ const HeroSection = () => {
                     <Spacer />
                     <ButtonYellow buttonText={"Reserve"} urlEndpoint={"reserve"} />
                 </VStack>
-                <Spacer></Spacer>
-                <Box >
-                    <Image src={heroSectionImage} maxWidth={"491px"}></Image>
+                <Spacer />
+                <Box>
+                    <Image marginTop={"100px"} src={heroSectionImage} maxWidth={"491px"} maxHeight={"450px"} rounded={"md"} shadow={"base"}></Image>
                 </Box>
+                <Spacer/>
             </HStack>
 
         </Box>
