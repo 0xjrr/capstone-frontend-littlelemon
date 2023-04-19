@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage';
 import ReservePage from './components/ReservePage';
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from  '@chakra-ui/react'
 
