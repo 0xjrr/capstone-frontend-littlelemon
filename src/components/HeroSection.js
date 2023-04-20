@@ -13,7 +13,10 @@ const HeroSection = () => {
                         We are a family owned, Mediterranean restaurant, focused on traditional recipes with a modern twist.
                     </Text>
                     <Spacer />
-                    <ButtonYellow buttonText={"Reserve"} urlEndpoint={"reserve"} />
+                    <Box>
+
+                        <ButtonYellow buttonText={"Reserve"} urlEndpoint={"reserve"} />
+                    </Box>
                 </VStack>
                 <Spacer />
                 <Box>
