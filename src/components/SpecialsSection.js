@@ -22,7 +22,16 @@ const SpecialsSection = () => {
                     <Spacer />
                 </Flex>
                 <Spacer />
-                <HStack>
+
+                <HStack
+                    overflowX="scroll"
+                    width={"100%"}
+                    sx={{
+                        "::-webkit-scrollbar": {
+                            display: "none",
+                        },
+                    }}
+                >
                     {menuItems.map(item => <CardSpecial itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />)}
                 </HStack>
             </VStack>
