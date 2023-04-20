@@ -8,8 +8,8 @@ const HeroSection = () => {
         <Box bgColor={"#495E57"} height={"512px"} >
             <HStack margin={"0 188px"}>
                 <VStack align={"right"}>
-                    <Location />
-                    <Text width={"300px"}>
+                    <Location color={"white"}/>
+                    <Text width={"300px"} color={"white"}>
                         We are a family owned, Mediterranean restaurant, focused on traditional recipes with a modern twist.
                     </Text>
                     <Spacer />
