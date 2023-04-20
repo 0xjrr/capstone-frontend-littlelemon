@@ -1,8 +1,8 @@
 import { Text, VStack} from "@chakra-ui/react";
 
-const Location = () => {
+const Location = (props) => {
     return (
-    <VStack align={"right"}>
+    <VStack align={"right"} color={props.color}>
         <Text fontSize={"40pt"}>
             Little Lemon
         </Text>
