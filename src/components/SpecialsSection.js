@@ -1,5 +1,7 @@
 import { Text, Box, HStack, VStack, Image, Spacer, Flex } from "@chakra-ui/react";
 import ButtonYellow from "./ButtonYellow";
+import CardSpecial from "./CardSpecial";
+import menuItems from "../data/menuItems";
 
 const SpecialsSection = () => {
     return (
@@ -17,7 +19,9 @@ const SpecialsSection = () => {
                     </Box>
                     <Spacer />
                 </Flex>
-
+                <HStack>
+                    {menuItems.map(item => <CardSpecial itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image}/>)}
+                </HStack>
             </VStack>
         </Box>
     );
