@@ -17,6 +17,7 @@ const Header = () => {
             backgroundColor="white"
             height={"124px"}
             alignItems={"center"}
+            style={{zIndex:1}}
         >
             <Box
             margin={"0 188px"}
