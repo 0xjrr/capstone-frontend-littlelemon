@@ -5,7 +5,7 @@ import menuItems from "../data/specialsItems";
 
 const SpecialsSection = () => {
     return (
-        <Box height={"984px"} margin={"80px 188px"}>
+        <Box margin={"80px 188px"}>
             <VStack>
                 <Flex width={"100%"}>
                     <Box width={"300px"}>
