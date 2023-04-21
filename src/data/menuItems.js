@@ -1,4 +1,3 @@
-import mezzeplatter from "../images/restaurant.jpg"
 
 const menuItems = [
     {
