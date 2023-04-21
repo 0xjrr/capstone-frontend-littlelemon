@@ -1,7 +1,7 @@
 import { Text, Box, HStack, VStack, Image, Spacer, Flex, Center } from "@chakra-ui/react";
 import ButtonYellow from "./ButtonYellow";
 import CardSpecial from "./CardSpecial";
-import menuItems from "../data/menuItems";
+import menuItems from "../data/specialsItems";
 
 const SpecialsSection = () => {
     return (
@@ -19,7 +19,6 @@ const SpecialsSection = () => {
                             <ButtonYellow buttonText={"Menu"} urlEndpoint={"menu"} />
                         </Center>
                     </Box>
-                    <Spacer />
                 </Flex>
                 <Spacer />
 
@@ -31,6 +30,7 @@ const SpecialsSection = () => {
                             display: "none",
                         },
                     }}
+                    spacing={"auto"}
                 >
                     {menuItems.map(item => <CardSpecial itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />)}
                 </HStack>
