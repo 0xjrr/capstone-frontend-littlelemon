@@ -3,7 +3,7 @@ import Location from "./Location";
 import aboutCardTopImage from "../images/aboutcard1.jpg"
 import aboutCardBottomImage from "../images/aboutcard2.jpg"
 
-const AboutCard = () => {
+const AboutSection = () => {
     return (
         <Box bgColor={"#495E57"} height={"512px"} >
             <HStack margin={"0 188px"}>
@@ -30,4 +30,4 @@ const AboutCard = () => {
         </Box>
     )
 };
-export default AboutCard;
+export default AboutSection;
