@@ -4,7 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage';
 import ReservePage from './components/ReservePage';
-// import ReactDOM from "react-dom/client";
+import AboutPage from './components/AboutPage';
+import MenuPage from './components/MenuPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from  '@chakra-ui/react'
 
@@ -17,7 +18,9 @@ function App() {
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/booking" element={<ReservePage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/menu" element={<MenuPage />}></Route>
+          <Route path="/reserve" element={<ReservePage />}></Route>
         </Routes>
         </BrowserRouter>
         <Footer />
