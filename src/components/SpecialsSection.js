@@ -1,4 +1,4 @@
-import { Text, Box, HStack, VStack, Image, Spacer, Flex, Center } from "@chakra-ui/react";
+import { Text, Box, HStack, VStack, Spacer, Flex, Center } from "@chakra-ui/react";
 import ButtonYellow from "./ButtonYellow";
 import CardSpecial from "./CardSpecial";
 import menuItems from "../data/specialsItems";
