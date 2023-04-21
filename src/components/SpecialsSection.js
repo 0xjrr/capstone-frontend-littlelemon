@@ -14,7 +14,7 @@ const SpecialsSection = () => {
                         </Text>
                     </Box>
                     <Spacer />
-                    <Box width={"297px"}>
+                    <Box >
                         <Center>
                             <ButtonYellow buttonText={"Menu"} urlEndpoint={"menu"} />
                         </Center>
