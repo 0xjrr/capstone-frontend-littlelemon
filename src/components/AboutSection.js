@@ -14,14 +14,14 @@ const AboutSection = () => {
                     </Text>
                 </VStack>
                 <Spacer />
-                <Box height={"512px"} width={"50%"} position={"relative"} >
-                    <Box position={"absolute"} left={"15%"} bottom={"15%"}>
+                <Box height={"512px"} width={"512px"} position={"relative"} >
+                    <Box position={"absolute"} left={"15%"} bottom={"15%"} width={"40%"} height={"40%"}>
 
-                        <Image src={aboutCardBottomImage} width={"254px"} height={"254px"} rounded={"md"} shadow={"base"} fit={"cover"}></Image>
+                        <Image src={aboutCardBottomImage} width={"100%"} height={"100%"} rounded={"md"} shadow={"base"} fit={"cover"}></Image>
                     </Box>
-                    <Box position={"absolute"} right={"15%"} top={"15%"}>
+                    <Box position={"absolute"} right={"15%"} top={"15%"} width={"40%"} height={"40%"}>
 
-                        <Image src={aboutCardTopImage} width={"254px"} height={"254px"} rounded={"md"} shadow={"base"} fit={"cover"}></Image>
+                        <Image src={aboutCardTopImage} width={"100%"} height={"100%"} rounded={"md"} shadow={"base"} fit={"cover"}></Image>
                     </Box>
                 </Box>
                 <Spacer />
