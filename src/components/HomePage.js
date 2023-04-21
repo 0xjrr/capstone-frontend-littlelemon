@@ -1,3 +1,4 @@
+import AboutCard from "./AboutCard";
 import HeroSection from "./HeroSection";
 import SpecialsSection from "./SpecialsSection";
 
@@ -6,7 +7,7 @@ const HomePage = () => {
         <div>
             <HeroSection />
             <SpecialsSection />
-
+            <AboutCard />
         </div>
     );
 };
