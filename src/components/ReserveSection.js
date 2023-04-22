@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { useFormik } from "formik";
+import { useFormik, yupToFormErrors } from "formik";
 import {
     Text,
     Box,
@@ -30,15 +30,17 @@ const ReserveSection = () => {
             email: '',
             comment: '',
             dateTime: '',
+            numberGuests: '',
         },
         onSubmit: (values) => {
             submit('', values);
         },
         validationSchema: Yup.object({
-            firstName: Yup.string().required('Required'),
-            email: Yup.string().email().required('Invalid email address'),
+            firstName: Yup.string().required('Required.'),
+            email: Yup.string().email().required('Invalid email address.'),
             comment: Yup.string(),
-            dateTime: Yup.string().required('Required'),
+            dateTime: Yup.string().required('Required.'),
+            numberGuests: Yup.number().min(1, 'Number should be greater or equal to 1.').max(10, 'For larger groups, call us.').required('Required. Number should be between 1 and 10. For larger groups, call us.')
         }),
     });
 
@@ -89,6 +91,16 @@ const ReserveSection = () => {
                                         {...formik.getFieldProps("email")}
                                     />
                                     <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
+                                </FormControl>
+                                <FormControl isInvalid={formik.touched.numberGuests && formik.errors.numberGuests}>
+                                    <FormLabel htmlFor="numberGuests">Number of People</FormLabel>
+                                    <Input
+                                        id="numberGuests"
+                                        name="numberGuests"
+                                        type="number"
+                                        {...formik.getFieldProps("numberGuests")}
+                                    />
+                                    <FormErrorMessage>{formik.errors.numberGuests}</FormErrorMessage>
                                 </FormControl>
                                 <FormControl isInvalid={formik.touched.dateTime && formik.errors.dateTime}>
                                     <FormLabel htmlFor="dateTime">Date and Time</FormLabel>
