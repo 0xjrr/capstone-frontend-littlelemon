@@ -1,3 +1,4 @@
+import React, {useEffect, useState} from "react";
 import { useFormik } from "formik";
 import {
     Text,
@@ -15,27 +16,43 @@ import {
     Textarea,
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
-import ButtonYellow from "./ButtonYellow";
+import useSubmit from "../hooks/useSubmit";
 import formImage from '../images/restaurant.jpg';
 
 const ReserveSection = () => {
+    const {isLoading, response, submit} = useSubmit();
+    const [reserved, setReserved] = useState("Reserve")
+    const [reservedLocked, setReservedLocked] = useState(false)
+
     const formik = useFormik({
         initialValues: {
             firstName: '',
             email: '',
-            comment: ''
-
+            comment: '',
+            dateTime: '',
         },
-        // onSubmit: (values) => {
-        //     submit('', values);
-        // },
-
+        onSubmit: (values) => {
+            submit('', values);
+        },
         validationSchema: Yup.object({
             firstName: Yup.string().required('Required'),
             email: Yup.string().email().required('Invalid email address'),
             comment: Yup.string(),
+            dateTime: Yup.string().required('Required'),
         }),
     });
+
+    useEffect(() => {
+        if (response) {
+            if (response.type === "success"){
+                setReserved("Successfully Reserved!")
+                setReservedLocked(true)
+                formik.resetForm();
+            }else{
+                setReserved("Try again!")
+            }
+        }
+      }, [response]);
 
     return (
         <Box margin={"80px 188px"}>
@@ -73,6 +90,16 @@ const ReserveSection = () => {
                                     />
                                     <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                                 </FormControl>
+                                <FormControl isInvalid={formik.touched.dateTime && formik.errors.dateTime}>
+                                    <FormLabel htmlFor="dateTime">Date and Time</FormLabel>
+                                    <Input
+                                        id="dateTime"
+                                        name="dateTime"
+                                        type="datetime-local"
+                                        {...formik.getFieldProps("dateTime")}
+                                    />
+                                    <FormErrorMessage>{formik.errors.dateTime}</FormErrorMessage>
+                                </FormControl>
                                 <FormControl isInvalid={formik.touched.comment && formik.errors.comment}>
                                     <FormLabel htmlFor="comment">Your message</FormLabel>
                                     <Textarea
@@ -89,8 +116,10 @@ const ReserveSection = () => {
                                     rounded={"md"}
                                     bgColor={"#F4CE14"}
                                     color={"black"}
+                                    isLoading={isLoading}
+                                    isDisabled={reservedLocked}
                                 >
-                                    Submit
+                                    {reserved}
                                 </Button>
                             </VStack>
                         </form>
