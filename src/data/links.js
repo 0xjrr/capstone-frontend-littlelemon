@@ -19,16 +19,16 @@ const links = [
         url: "/reserve",
         anchor: "reserve",
     },
-    {
-        name: "Order online",
-        url: "/order",
-        anchor: "order",
-    },
-    {
-        name: "Login",
-        url: "/login",
-        anchor: "login",
-    },
+    // {
+    //     name: "Order online",
+    //     url: "/order",
+    //     anchor: "order",
+    // },
+    // {
+    //     name: "Login",
+    //     url: "/login",
+    //     anchor: "login",
+    // },
 ];
 
 export default links;
