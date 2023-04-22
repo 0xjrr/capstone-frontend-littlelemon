@@ -29,9 +29,9 @@ const Header = () => {
                     alignItems="center"
                 >
                     <nav>
-                        <Box>
-                            <a href={"/"}>
-                                <Image src={logo} alt="Logo" height={"60px"} width={"auto"} />
+                        <Box height={"60px"}>
+                            <a href={"/"} height={"100%"}>
+                                <Image src={logo} alt="Logo" height={"100%"} width={"100%"} />
                             </a>
                         </Box>
                     </nav>
