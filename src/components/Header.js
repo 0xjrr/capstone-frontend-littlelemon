@@ -17,10 +17,10 @@ const Header = () => {
             backgroundColor="white"
             height={"124px"}
             alignItems={"center"}
-            style={{zIndex:1}}
+            style={{ zIndex: 1 }}
         >
             <Box
-            margin={"0 188px"}
+                margin={"0 188px"}
             >
                 <HStack
                     px={0}
@@ -29,16 +29,18 @@ const Header = () => {
                     alignItems="center"
                 >
                     <nav>
-                        <HStack spacing={8}>
-                            <Image src={logo} alt="Logo" height={"60px"} width={"auto"} />
-                        </HStack>
+                        <Box>
+                            <a href={"/"}>
+                                <Image src={logo} alt="Logo" height={"60px"} width={"auto"} />
+                            </a>
+                        </Box>
                     </nav>
                     <nav>
                         <HStack spacing={8}>
                             {links.map(link =>
-                            <Box rounded={"md"} padding={"5px"}>
-                                <a key={link.anchor} href={link.url}> {link.name}</a>
-                            </Box>)
+                                <Box rounded={"md"} padding={"5px"}>
+                                    <a key={link.anchor} href={link.url}> {link.name}</a>
+                                </Box>)
                             }
                         </HStack>
                     </nav>
