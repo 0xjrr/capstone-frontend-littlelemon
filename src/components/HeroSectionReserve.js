@@ -18,7 +18,7 @@ const HeroSection = () => {
                 </Box>
                 <Spacer />
                 <Box paddingRight={"15%"}>
-                    <Image marginTop={"15%"} src={heroSectionImage} width={"450px"} height={"491px"} rounded={"md"} shadow={"base"} fit={"cover"}></Image>
+                    <Image marginTop={"15%"} src={heroSectionImage} width={"450px"} height={"491px"} rounded={"md"} shadow={"base"} fit={"fill"}></Image>
                 </Box>
                 
             </HStack>
