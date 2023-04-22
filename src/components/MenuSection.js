@@ -1,4 +1,4 @@
-import { Text, Box, HStack, VStack, Spacer, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Text, Box, VStack, Spacer, Flex, SimpleGrid } from "@chakra-ui/react";
 import CardSpecial from "./CardSpecial";
 import menuItems from "../data/menuItems";
 
