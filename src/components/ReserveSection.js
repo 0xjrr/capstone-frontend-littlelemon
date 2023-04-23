@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import { useFormik, yupToFormErrors } from "formik";
+import React, { useEffect, useState } from "react";
+import { useFormik } from "formik";
 import {
     Text,
     Box,
@@ -14,15 +14,18 @@ import {
     Button,
     Image,
     Textarea,
+    Select,
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import useSubmit from "../hooks/useSubmit";
 import formImage from '../images/restaurant.jpg';
 
+
 const ReserveSection = () => {
-    const {isLoading, response, submit} = useSubmit();
+    const { isLoading, response, submit } = useSubmit();
     const [reserved, setReserved] = useState("Reserve")
     const [reservedLocked, setReservedLocked] = useState(false)
+    const [timeSlots, setTimeSlots] = useState(['Select date', ])
 
     const formik = useFormik({
         initialValues: {
@@ -46,15 +49,15 @@ const ReserveSection = () => {
 
     useEffect(() => {
         if (response) {
-            if (response.type === "success"){
+            if (response.type === "success") {
                 setReserved("Successfully Reserved!")
                 setReservedLocked(true)
                 formik.resetForm();
-            }else{
+            } else {
                 setReserved("Try again!")
             }
         }
-      }, [response]);
+    }, [response]);
 
     return (
         <Box margin={"80px 188px"}>
@@ -102,16 +105,33 @@ const ReserveSection = () => {
                                     />
                                     <FormErrorMessage>{formik.errors.numberGuests}</FormErrorMessage>
                                 </FormControl>
-                                <FormControl isInvalid={formik.touched.dateTime && formik.errors.dateTime}>
-                                    <FormLabel htmlFor="dateTime">Date and Time</FormLabel>
-                                    <Input
-                                        id="dateTime"
-                                        name="dateTime"
-                                        type="datetime-local"
-                                        {...formik.getFieldProps("dateTime")}
-                                    />
-                                    <FormErrorMessage>{formik.errors.dateTime}</FormErrorMessage>
-                                </FormControl>
+                                <HStack width={"100%"}>
+
+                                    <FormControl isInvalid={formik.touched.dateTime && formik.errors.dateTime}>
+                                        <FormLabel htmlFor="dateTime">Date</FormLabel>
+                                        <Input
+                                            id="dateTime"
+                                            name="dateTime"
+                                            type="date"
+                                            onChange={(e) => {}}
+                                            {...formik.getFieldProps("dateTime")}
+                                        />
+                                        <FormErrorMessage>{formik.errors.dateTime}</FormErrorMessage>
+                                    </FormControl>
+                                    <FormControl isInvalid={formik.touched.reserveTime && formik.errors.reserveTime}>
+                                        <FormLabel htmlFor="reserveTime">Time</FormLabel>
+                                        <Select
+                                            id="reserveTime"
+                                            name="reserveTime"
+                                            disabled={true}
+                                            {...formik.getFieldProps("reserveTime")}
+                                        >
+                                            {timeSlots.map( (timeSlot) => <option value={timeSlot}>{timeSlot}</option>)}
+                                            
+                                        </Select>
+                                        <FormErrorMessage>{formik.errors.reserveTime}</FormErrorMessage>
+                                    </FormControl>
+                                </HStack>
                                 <FormControl isInvalid={formik.touched.comment && formik.errors.comment}>
                                     <FormLabel htmlFor="comment">Your message</FormLabel>
                                     <Textarea
