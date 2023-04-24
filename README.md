@@ -35,7 +35,7 @@ The about page provides more information about the restaurant, including its his
 
 ### Reserve
 
-The reserve page includes a form for making a reservation. The form asks for the user's name, email, phone number, date, time, and number of guests. Once the user submits the form, a confirmation message is displayed.
+The reserve page includes a form for making a reservation. The form asks for the user's name, email, date, time, and number of guests. Once the user submits the form, a confirmation message is displayed.
 
 ## Conclusion
 
