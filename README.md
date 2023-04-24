@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Capstone project: Restaurant Website with ReactJS - Little Lemon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a frontend development capstone project that utilizes ReactJS to create a website for a restaurant. The website has four main pages: homepage, menu, about, and reserve. The reserve page includes a form for making a reservation.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- ReactJS
+- HTML
+- CSS
+- JavaScript
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Install the necessary dependencies by running the following command: 
+### npm install
+4. Start the development server by running the following command: 
+npm start
+5. Navigate to `http://localhost:3000` in your browser to view the website.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pages
 
-### `npm test`
+### Homepage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The homepage displays the restaurant's name, a brief description, and a featured dish. It also includes a call-to-action button that directs the user to the reserve page.
 
-### `npm run build`
+### Menu
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The menu page displays a list of categories, such as appetizers, entrees, and desserts. Clicking on a category displays a list of dishes within that category.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### About
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The about page provides more information about the restaurant, including its history, mission, and values.
 
-### `npm run eject`
+### Reserve
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The reserve page includes a form for making a reservation. The form asks for the user's name, email, phone number, date, time, and number of guests. Once the user submits the form, a confirmation message is displayed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Conclusion
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project demonstrates how to use ReactJS to create a restaurant website with multiple pages and a reservation form. The code is well-organized and easy to read, making it a good starting point for further development.
