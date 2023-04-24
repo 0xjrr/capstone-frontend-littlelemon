@@ -14,9 +14,14 @@ This project is a frontend development capstone project that utilizes ReactJS to
 1. Clone the repository to your local machine.
 2. Navigate to the project directory in your terminal.
 3. Install the necessary dependencies by running the following command: 
-### npm install
+```
+npm install
+```
+
 4. Start the development server by running the following command: 
+```
 npm start
+```
 5. Navigate to `http://localhost:3000` in your browser to view the website.
 
 ## Pages
