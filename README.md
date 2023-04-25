@@ -1,8 +1,11 @@
 # Capstone project: Restaurant Website with ReactJS - Little Lemon (Created by: 0xjrr)
 
 This project is a frontend development capstone project that utilizes ReactJS to create a website for a restaurant. The website has four main pages: homepage, menu, about, and reserve. The reserve page includes a form for making a reservation.
+
 The form validation is done with formik and Yup. The date input triggers a useEffect with formik validation that fetches times with a mock API call. 
+
 The submit button triggers another useEffect that simulates a real submission with chance to fail. 
+
 If successful the submit button gets disabled and a success message is shown in the the button, else a try again message is shown in the the button.
 
 ## Technologies Used
