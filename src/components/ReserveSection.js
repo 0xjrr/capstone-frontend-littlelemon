@@ -19,13 +19,17 @@ import {
 import * as Yup from 'yup';
 import useSubmit from "../hooks/useSubmit";
 import formImage from '../images/restaurant.jpg';
+import { submitAPI, fetchAPI } from "../hooks/api"
 
 
 const ReserveSection = () => {
     const { isLoading, response, submit } = useSubmit();
     const [reserved, setReserved] = useState("Reserve")
     const [reservedLocked, setReservedLocked] = useState(false)
-    const [timeSlots, setTimeSlots] = useState(['Select date', ])
+    const [timeSlots, setTimeSlots] = useState(['Select date',])
+    const [dateField, setDateField] = useState('')
+    const [timeFieldLocked, setTimeFieldLocked] = useState(true)
+
 
     const formik = useFormik({
         initialValues: {
@@ -37,6 +41,8 @@ const ReserveSection = () => {
         },
         onSubmit: (values) => {
             submit('', values);
+            submitAPI(values);
+
         },
         validationSchema: Yup.object({
             firstName: Yup.string().required('Required.'),
@@ -47,12 +53,34 @@ const ReserveSection = () => {
         }),
     });
 
+    const handleDateFieldChange = (event) => {
+        formik.handleChange(event)
+        setDateField(event.target.value)
+    }
     useEffect(() => {
+        console.log('Field' + dateField)
+        if (dateField !== '') {
+            let dateObject = new Date(dateField)
+            console.log(dateObject)
+            const slots = fetchAPI(dateObject)
+            console.log(slots)
+            setTimeSlots(slots)
+            setTimeFieldLocked(false)
+        }
+    }, [dateField])
+
+    useEffect(() => {
+        const resetFormFunc = () => {
+            setReserved("Successfully Reserved!")
+            setReservedLocked(true)
+            setTimeSlots(['Select date',])
+            setTimeFieldLocked(true)
+            setDateField('')
+            formik.resetForm();
+        }
         if (response) {
             if (response.type === "success") {
-                setReserved("Successfully Reserved!")
-                setReservedLocked(true)
-                formik.resetForm();
+                resetFormFunc()            
             } else {
                 setReserved("Try again!")
             }
@@ -75,7 +103,7 @@ const ReserveSection = () => {
                     <Box width={"50%"} left={"0px"} position={"relative"}>
 
                         <form onSubmit={formik.handleSubmit}>
-                            <VStack spacing={4} width={"100%"}>
+                            <VStack spacing={8} width={"100%"}>
                                 <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName}>
                                     <FormLabel htmlFor="firstName">Name</FormLabel>
                                     <Input
@@ -113,8 +141,9 @@ const ReserveSection = () => {
                                             id="dateTime"
                                             name="dateTime"
                                             type="date"
-                                            onChange={(e) => {}}
                                             {...formik.getFieldProps("dateTime")}
+                                            value={dateField}
+                                            onChange={handleDateFieldChange}
                                         />
                                         <FormErrorMessage>{formik.errors.dateTime}</FormErrorMessage>
                                     </FormControl>
@@ -123,11 +152,10 @@ const ReserveSection = () => {
                                         <Select
                                             id="reserveTime"
                                             name="reserveTime"
-                                            disabled={true}
+                                            disabled={timeFieldLocked}
                                             {...formik.getFieldProps("reserveTime")}
                                         >
-                                            {timeSlots.map( (timeSlot) => <option value={timeSlot}>{timeSlot}</option>)}
-                                            
+                                            {timeSlots.map((timeSlot) => <option key={timeSlot} value={timeSlot}>{timeSlot}</option>)}
                                         </Select>
                                         <FormErrorMessage>{formik.errors.reserveTime}</FormErrorMessage>
                                     </FormControl>
