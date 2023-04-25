@@ -28,11 +28,11 @@ npm start
 
 ### Homepage
 
-The homepage displays the restaurant's name, a brief description, and a featured dish. It also includes a call-to-action button that directs the user to the reserve page.
+The homepage displays the restaurant's name, a brief description, and featured dishes. It also includes a call-to-action button that directs the user to the reserve page.
 
 ### Menu
 
-The menu page displays a list of categories, such as appetizers, entrees, and desserts. Clicking on a category displays a list of dishes within that category.
+The menu page displays the dishes in a grid.
 
 ### About
 
@@ -46,5 +46,19 @@ The reserve page includes a form for making a reservation. The form asks for the
 
 This project demonstrates how to use ReactJS to create a restaurant website with multiple pages and a reservation form. The code is well-organized and easy to read, making it a good starting point for further development.
 
-## Author
+# Author
+J Ricardo Ribeiro (0xjrr)
+
+# UI Work - Figma (0xjrr)
+## Wireframe Homepage
+![Wireframe Homepage](Slice%20wire%20home.png)
+## Wireframe Reserve Page
+![Wireframe Reserve Page](Slice%20wire%20reserve.png)
+
+## Mockup Homepage
+![Mockup Homepage](Slice%20home.png)
+## Mockup Reserve Page
+![Mockup Reserve Page](Slice%20reserve.png)
+
+# Author
 J Ricardo Ribeiro (0xjrr)
