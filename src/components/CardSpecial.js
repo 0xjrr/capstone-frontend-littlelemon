@@ -2,7 +2,7 @@ import { Text, Box, VStack, Image, Spacer, Flex, HStack } from "@chakra-ui/react
 
 const CardSpecial = (props) => {
     return (
-        <Box height={"660px"} width={"306px"} minWidth={"306px"} bgColor={"#D0D0D0"} rounded={"md"}>
+        <Box height={"660px"} minWidth={"306px"} maxWidth={"450px"}  bgColor={"#D0D0D0"} rounded={"md"}>
             <VStack height={"100%"}>
                 <Image src={props.itemImage} rounded={"md"} fit={"cover"} height={"200px"} width={"100%"} />
                 <Flex width={"80%"}>
