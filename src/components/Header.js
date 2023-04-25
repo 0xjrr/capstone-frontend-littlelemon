@@ -38,7 +38,7 @@ const Header = () => {
                     <nav>
                         <HStack spacing={8}>
                             {links.map(link =>
-                                <Box rounded={"md"} padding={"5px"}>
+                                <Box rounded={"md"} padding={"5px"} key={link.anchor}>
                                     <a key={link.anchor} href={link.url}> {link.name}</a>
                                 </Box>)
                             }
