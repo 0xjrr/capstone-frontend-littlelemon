@@ -20,7 +20,7 @@ const MenuSection = () => {
                     spacing={"10px"}
                     spacingY={"40px"}
                     >
-                    {menuItems.map(item => <CardSpecial itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />)}
+                    {menuItems.map(item => <CardSpecial key={item.name} itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />)}
                 </SimpleGrid>
                     </Box>
             </VStack>
