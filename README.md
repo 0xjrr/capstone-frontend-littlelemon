@@ -1,4 +1,4 @@
-# Capstone project: Restaurant Website with ReactJS - Little Lemon
+# Capstone project: Restaurant Website with ReactJS - Little Lemon (Created by: 0xjrr)
 
 This project is a frontend development capstone project that utilizes ReactJS to create a website for a restaurant. The website has four main pages: homepage, menu, about, and reserve. The reserve page includes a form for making a reservation.
 
@@ -45,3 +45,6 @@ The reserve page includes a form for making a reservation. The form asks for the
 ## Conclusion
 
 This project demonstrates how to use ReactJS to create a restaurant website with multiple pages and a reservation form. The code is well-organized and easy to read, making it a good starting point for further development.
+
+## Author
+J Ricardo Ribeiro (0xjrr)
