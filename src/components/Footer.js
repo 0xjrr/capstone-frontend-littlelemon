@@ -25,7 +25,7 @@ const Footer = () => {
                             <List>
                                 {
                                     links.map(link =>
-                                        <ListItem>
+                                        <ListItem key={link.anchor}>
                                             <a key={link.anchor} href={link.url}> {link.name}</a>
                                         </ListItem>)
                                 }
