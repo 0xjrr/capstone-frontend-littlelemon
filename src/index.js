@@ -8,7 +8,7 @@ import { HashRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter basename="/">
+  <HashRouter basename="/capstone-frontend-littlelemon">
     <React.StrictMode>
       <App />
     </React.StrictMode>
