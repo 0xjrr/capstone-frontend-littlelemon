@@ -1,4 +1,5 @@
 import { Text, Box, VStack, Image, Spacer, Flex, HStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const CardSpecial = (props) => {
     return (
@@ -24,7 +25,7 @@ const CardSpecial = (props) => {
                 <Box position={"relative"} bottom={"10px"} width={"80%"}>
                     <HStack color="#495E57" fontWeight={"bold"}>
                         <Spacer />
-                        <a href="/order" align="left">Order</a>
+                        <Link to="/reserve" align="left">Reserve</Link>
                     </HStack>
                 </Box>
             </VStack>
