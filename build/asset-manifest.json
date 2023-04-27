@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/capstone-frontend-littlelemon/static/css/main.073c9b0a.css",
+    "main.js": "/capstone-frontend-littlelemon/static/js/main.e4eee523.js",
+    "static/js/787.0bb9551e.chunk.js": "/capstone-frontend-littlelemon/static/js/787.0bb9551e.chunk.js",
+    "static/media/aboutcard1.jpg": "/capstone-frontend-littlelemon/static/media/aboutcard1.bea6990829f44b3e90e2.jpg",
+    "static/media/aboutcard2.jpg": "/capstone-frontend-littlelemon/static/media/aboutcard2.0209efa6b0daebcd2068.jpg",
+    "static/media/aboutlargesection.jpg": "/capstone-frontend-littlelemon/static/media/aboutlargesection.c810e572c0d6b42f4e50.jpg",
+    "static/media/herosection.jpg": "/capstone-frontend-littlelemon/static/media/herosection.c79939f2b879276c5e03.jpg",
+    "static/media/restaurant.jpg": "/capstone-frontend-littlelemon/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/footerlogo.png": "/capstone-frontend-littlelemon/static/media/footerlogo.2c859235d6c57bb54176.png",
+    "static/media/navlogo.png": "/capstone-frontend-littlelemon/static/media/navlogo.d4cae6fac8384c2dae04.png",
+    "index.html": "/capstone-frontend-littlelemon/index.html",
+    "main.073c9b0a.css.map": "/capstone-frontend-littlelemon/static/css/main.073c9b0a.css.map",
+    "main.e4eee523.js.map": "/capstone-frontend-littlelemon/static/js/main.e4eee523.js.map",
+    "787.0bb9551e.chunk.js.map": "/capstone-frontend-littlelemon/static/js/787.0bb9551e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e4eee523.js"
+  ]
+}
