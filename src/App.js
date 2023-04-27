@@ -6,7 +6,7 @@ import HomePage from './components/HomePage';
 import ReservePage from './components/ReservePage';
 import AboutPage from './components/AboutPage';
 import MenuPage from './components/MenuPage';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Box } from  '@chakra-ui/react'
 
 function App() {
@@ -15,14 +15,12 @@ function App() {
       <ChakraProvider>
         <Header />
         <Box height={"124px"} />
-        <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/about" element={<AboutPage />}></Route>
           <Route path="/menu" element={<MenuPage />}></Route>
           <Route path="/reserve" element={<ReservePage />}></Route>
         </Routes>
-        </BrowserRouter>
         <Footer />
       </ChakraProvider>
     </>
