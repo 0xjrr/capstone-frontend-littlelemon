@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Spacer, VStack, Image, Text, List, ListItem } from "@chakra-ui/react";
 import footerLogo from "../images//footerlogo.png"
 import links from "../data/links";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -26,7 +27,7 @@ const Footer = () => {
                                 {
                                     links.map(link =>
                                         <ListItem key={link.anchor}>
-                                            <a key={link.anchor} href={link.url}> {link.name}</a>
+                                            <Link key={link.anchor} to={link.url}> {link.name}</Link>
                                         </ListItem>)
                                 }
                             </List>

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, HStack, Image } from "@chakra-ui/react";
 import logo from "../images/navlogo.png"
 import links from "../data/links";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -30,16 +31,16 @@ const Header = () => {
                 >
                     <nav>
                         <Box height={"60px"}>
-                            <a href={"/"} height={"100%"}>
+                            <Link to={"/"} height={"100%"}>
                                 <Image src={logo} alt="Logo" height={"100%"} width={"100%"} />
-                            </a>
+                            </Link>
                         </Box>
                     </nav>
                     <nav>
                         <HStack spacing={8}>
                             {links.map(link =>
                                 <Box rounded={"md"} padding={"5px"} key={link.anchor}>
-                                    <a key={link.anchor} href={link.url}> {link.name}</a>
+                                    <Link key={link.anchor} to={link.url}> {link.name}</Link>
                                 </Box>)
                             }
                         </HStack>
