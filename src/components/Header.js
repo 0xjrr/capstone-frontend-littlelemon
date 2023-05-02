@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, HStack, Image } from "@chakra-ui/react";
 import logo from "../images/navlogo.png"
-import links from "../data/links";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -38,11 +37,15 @@ const Header = () => {
                     </nav>
                     <nav>
                         <HStack spacing={8}>
-                            {links.map(link =>
+                            <Link key="home" to={"/"}> Home</Link>
+                            <Link key="about" to={"/about"}> About</Link>
+                            <Link key="menu" to={"/menu"}> Menu</Link>
+                            <Link key="reserve" to={"/reserve"}> Reservations</Link>
+                            {/* {links.map(link =>
                                 <Box rounded={"md"} padding={"5px"} key={link.anchor}>
                                     <Link key={link.anchor} to={link.url}> {link.name}</Link>
                                 </Box>)
-                            }
+                            } */}
                         </HStack>
                     </nav>
                 </HStack>

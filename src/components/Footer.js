@@ -23,14 +23,19 @@ const Footer = () => {
                             <Text fontSize={"18pt"}>
                                 Navigation
                             </Text>
-                            <List>
-                                {
+                            <VStack align={"left"}>
+                                <Link key="home" to={"/"}> Home</Link>
+                                <Link key="about" to={"/about"}> About</Link>
+                                <Link key="menu" to={"/menu"}> Menu</Link>
+                                <Link key="reserve" to={"/reserve"}> Reservations</Link>
+
+                                {/* {
                                     links.map(link =>
                                         <ListItem key={link.anchor}>
                                             <Link key={link.anchor} to={link.url}> {link.name}</Link>
                                         </ListItem>)
-                                }
-                            </List>
+                                } */}
+                            </VStack>
                         </VStack>
                     </Box>
                     <Spacer />
