@@ -15,14 +15,14 @@ const MenuSection = () => {
                 </Flex>
                 <Spacer />
                 <Box width={"100%"}>
-                <SimpleGrid 
-                    minChildWidth={"306px"} 
-                    spacing={"10px"}
-                    spacingY={"40px"}
+                    <SimpleGrid
+                        minChildWidth={"306px"}
+                        spacing={"10px"}
+                        spacingY={"40px"}
                     >
-                    {menuItems.map(item => <CardSpecial key={item.name} itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />)}
-                </SimpleGrid>
-                    </Box>
+                        {menuItems.map(item => <CardSpecial key={item.name} itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />)}
+                    </SimpleGrid>
+                </Box>
             </VStack>
         </Box>
     );

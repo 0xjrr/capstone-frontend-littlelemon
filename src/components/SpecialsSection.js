@@ -1,4 +1,4 @@
-import { Text, Box, HStack, VStack, Spacer, Flex, Center } from "@chakra-ui/react";
+import { Text, Box, VStack, Spacer, Flex, Center, SimpleGrid } from "@chakra-ui/react";
 import ButtonYellow from "./ButtonYellow";
 import CardSpecial from "./CardSpecial";
 import menuItems from "../data/specialsItems";
@@ -21,21 +21,23 @@ const SpecialsSection = () => {
                     </Box>
                 </Flex>
                 <Spacer />
-
-                <HStack
-                    width={"100%"}
-                    spacing={"5%"}
-                >
-                    {menuItems.map(item => {
-                        return (
-                            <Spacer key={item.name}>
-                                <CardSpecial key={item.name} itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />
-                            </Spacer>
+                <Box width={"100%"}>
+                    <SimpleGrid
+                        minChildWidth={"306px"}
+                        spacing={"10px"}
+                        spacingY={"40px"}
+                    >
+                        {menuItems.map(item => {
+                            return (
+                                <Spacer key={item.name}>
+                                    <CardSpecial key={item.name} itemName={item.name} itemPrice={item.price} itemDescription={item.description} itemImage={item.image} />
+                                </Spacer>
                             );
                         }
-                    )};
+                        )}
 
-                </HStack>
+                    </SimpleGrid>
+                </Box>
             </VStack>
         </Box>
     );
