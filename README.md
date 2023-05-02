@@ -1,3 +1,7 @@
+#About this branch:
+This branch changes some core aspects such as the react router to allow github pages deployment.
+
+
 # Capstone project: Restaurant Website with ReactJS - Little Lemon (Created by: 0xjrr)
 
 This project is a frontend development capstone project that utilizes ReactJS to create a website for a restaurant. The website has four main pages: homepage, menu, about, and reserve. The reserve page includes a form for making a reservation.
