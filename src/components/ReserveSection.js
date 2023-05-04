@@ -20,9 +20,20 @@ import * as Yup from 'yup';
 import useSubmit from "../hooks/useSubmit";
 import formImage from '../images/restaurant.jpg';
 import { submitAPI, fetchAPI } from "../hooks/api"
+import useWindowDimensions from "../hooks/useWindowDimensions";
+
 
 
 const ReserveSection = () => {
+    const windowSize = useWindowDimensions();
+    const imageReserve = () => {
+        return(
+            <Box width={"50%"} padding={"5%"}>
+                <Image src={formImage} rounded={"md"} />
+            </Box>
+        );
+    }
+
     const { isLoading, response, submit } = useSubmit();
     const [reserved, setReserved] = useState("Reserve")
     const [reservedLocked, setReservedLocked] = useState(false)
@@ -100,7 +111,7 @@ const ReserveSection = () => {
                 </Flex>
                 <Spacer />
                 <HStack width={"100%"}>
-                    <Box width={"50%"} left={"0px"} position={"relative"}>
+                    <Box minWidth={"50%"} maxWidth={"100%"} left={"0px"} position={"relative"}>
 
                         <form onSubmit={formik.handleSubmit}>
                             <VStack spacing={8} width={"100%"}>
@@ -185,9 +196,9 @@ const ReserveSection = () => {
                         </form>
 
                     </Box>
-                    <Box width={"50%"} padding={"5%"}>
-                        <Image src={formImage} rounded={"md"} />
-                    </Box>
+
+                    {windowSize.width>1300 ? imageReserve() : null}
+                    
                 </HStack>
             </VStack>
         </Box>

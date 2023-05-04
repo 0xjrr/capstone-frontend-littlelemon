@@ -3,8 +3,18 @@ import { Box, Flex, Spacer, VStack, Image, Text, List, ListItem } from "@chakra-
 import footerLogo from "../images//footerlogo.png"
 import links from "../data/links";
 import { Link } from "react-router-dom";
+import useWindowDimensions from "../hooks/useWindowDimensions";
+
 
 const Footer = () => {
+    const windowSize = useWindowDimensions();
+    const imageFooter = () => {
+        return(
+        <Box p='4'>
+            <Image src={footerLogo} width={"124px"} height={"auto"} />
+        </Box>
+        );
+    }
     return (
         <Box backgroundColor="#D9D9D9">
             <footer>
@@ -14,9 +24,8 @@ const Footer = () => {
                     height={"256px"}
                     color={"black"}
                 >
-                    <Box p='4'>
-                        <Image src={footerLogo} width={"124px"} height={"auto"} />
-                    </Box>
+                    
+                    {windowSize.width>950 ? imageFooter() : null}
                     <Spacer />
                     <Box p='4'>
                         <VStack align={"left"}>

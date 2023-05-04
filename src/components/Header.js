@@ -2,8 +2,18 @@ import React from "react";
 import { Box, HStack, Image } from "@chakra-ui/react";
 import logo from "../images/navlogo.png"
 import { Link } from "react-router-dom";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const Header = () => {
+    const windowSize = useWindowDimensions();
+    const imageNavLogo = () => {
+        return(
+            <Link to={"/"} height={"100%"}>
+                <Image src={logo} alt="Logo" height={"100%"} width={"100%"} />
+            </Link>
+        );
+    }
+
     return (
         <Box
             position="fixed"
@@ -30,9 +40,7 @@ const Header = () => {
                 >
                     <nav>
                         <Box height={"60px"}>
-                            <Link to={"/"} height={"100%"}>
-                                <Image src={logo} alt="Logo" height={"100%"} width={"100%"} />
-                            </Link>
+                            {windowSize.width>950 ? imageNavLogo() : null}
                         </Box>
                     </nav>
                     <nav>

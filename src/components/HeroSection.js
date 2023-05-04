@@ -32,8 +32,7 @@ const HeroSection = () => {
                     </Box>
                 </VStack>
                 </Box>
-                <Spacer />
-
+                {windowSize.width>1300 ? <Spacer /> : null}
                 {windowSize.width>1300 ? imageHero() : null}
                 
                 

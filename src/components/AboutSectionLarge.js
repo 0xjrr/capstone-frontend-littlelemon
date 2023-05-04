@@ -1,8 +1,18 @@
 import { Text, Box, VStack, Spacer, Flex, Center, HStack, Image } from "@chakra-ui/react";
 import ButtonYellow from "./ButtonYellow";
 import imageAboutLarge from "../images/aboutlargesection.jpg"
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const SpecialsSection = () => {
+    const windowSize = useWindowDimensions();
+    const imageAboutLG = () => {
+        return(
+            <Box minWidth={"375px"} height={"250px"} marginRight={"80px"}>
+                <Image src={imageAboutLarge} height={"100%"} position={"center"} rounded={"md"} />
+            </Box>
+
+        );
+    }
     return (
         <Box margin={"80px 188px"}>
             <VStack>
@@ -21,10 +31,8 @@ const SpecialsSection = () => {
                 </Flex>
                 <Spacer />
                 <HStack width={"100%"}>
-                    <Box width={"375px"} height={"250px"} marginRight={"80px"}>
-                        <Image src={imageAboutLarge} height={"100%"} position={"center"} rounded={"md"} />
-                    </Box>
-                    <Box width={"60%"} right={"0px"}>
+                    {windowSize.width>1300 ? imageAboutLG() : null}
+                    <Box minWidth={"60%"} right={"0px"}>
                         <Text align={"justify"}>
                             Welcome to Little Lemon, a charming Mediterranean restaurant that will transport you to the sunny shores of the Mediterranean. Our restaurant is dedicated to bringing you the freshest and most authentic Mediterranean cuisine possible. Our dishes are crafted with the finest ingredients, expertly seasoned with a blend of herbs and spices that will tantalize your taste buds.
                             <br></br>
